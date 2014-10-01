@@ -14,7 +14,6 @@
     "url": "git@github.com:zordius/badge-render.git"
   },
   "dependencies": {
-    "browser-logos": "2.1.1",
     "phantomjs": "1.9.10"
   },
   "bin": {
