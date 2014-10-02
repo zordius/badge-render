@@ -38,7 +38,7 @@ var exec = require('child_process').exec,
         if (W) {
             console.warn(W);
         }
-        console.warn('Usage: ' + process.argv[1] + ' [--' + Object.keys(optcfg).join('] [--') + '] [--] badge.json');
+        console.warn('Usage: ' + process.argv[1] + ' [--' + Object.keys(optcfg).join('] [--') + '] [--] badge.json output.html');
         process.exit(1);
     },
 
@@ -47,7 +47,7 @@ var exec = require('child_process').exec,
     json = null;
 
 // Should have a file there
-if (file.length !== 1) {
+if (file.length !== 2) {
     die();
 }
 
@@ -66,7 +66,9 @@ if (!json) {
 console.log(opts);
 
 badge(json, {
-   file: opts.output,
+   file: file[1],
    cssfile: opts.css,
    hbfile: opts.template
 });
+
+exec(cmd + file[1] + ' ' + (opts.png || (file[1] + '.png')));
