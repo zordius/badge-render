@@ -5,7 +5,7 @@ A Node.js + PhantomJS based solution to generate browser testing results badge
 
 LOGO images from https://github.com/substack/browser-badge
 
-[![npm version](https://img.shields.io/npm/v/badge-render.svg)](https://www.npmjs.org/package/badge-render) [![Dependency Status](https://david-dm.org/zordius/badge-render.png)](https://david-dm.org/zordius/badge-render)
+[![npm version](https://img.shields.io/npm/v/badge-render.svg)](https://www.npmjs.org/package/badge-render) [![Dependency Status](https://david-dm.org/zordius/badge-render.png)](https://david-dm.org/zordius/badge-render) [![Build Status](https://travis-ci.org/zordius/badge-render.svg?branch=master)](https://travis-ci.org/zordius/badge-render)
 
 Install
 -------
