@@ -25,3 +25,8 @@ badge-render examples/all_browsers_pass.json lib/index.html
 The input JSON: <a href="examples/all_browsers_pass.json">examples/all_browsers_pass.json</a>
 The output HTML: <a href="lib/index.html">lib/index.html</a>
 The output PNG: <a href="lib/index.html.png">lib/index.html.png</a>
+
+** Options: Output png with another name **
+```sh
+badge-render examples/all_browsers_pass.json lib/index.html --png test.png
+```
