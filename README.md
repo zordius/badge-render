@@ -61,3 +61,32 @@ badge-render examples/all_browsers_pass.json lib/index.html --png examples/style
 
 * The CSS file: <a href="examples/extra.css">examples/extra.css</a>
 * The output PNG: <img src="examples/style.png" />
+
+CommonJS Usage
+--------------
+
+```javascript
+var badge = require('badge-render');
+
+// generate HTML by default handlebars template
+badge({
+ browsers: {
+   safari: {'10.0': true},
+   explorer: {'10.0': false},
+   firefox: {'10.0': true}
+ }
+});
+
+// provide more options
+badge({
+  browsers: {...},
+  title: 'change title of the html (default template)',
+  assets: 'change the assets base url (default template)',
+  template: 'template string',
+  css: 'css string for template (default template)'
+}, {
+  file: 'full path of output file',
+  hbfile: 'full path of handlebars template',
+  cssfile: 'full path of css file to customize default template'
+});
+```
