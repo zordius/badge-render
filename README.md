@@ -50,3 +50,14 @@ badge-render examples/all_browsers_pass.json lib/index.html --png examples/small
 ```
 
 * The output PNG: <img src="examples/small.png" />
+
+**Options: customize the style**
+
+Append your css file into the HTML.
+
+```sh
+badge-render examples/all_browsers_pass.json lib/index.html --png examples/style.png --css examples/extra.css
+```
+
+* The CSS file: <a href="examples/extra.css">examples/extra.css</a>
+* The output PNG: <img src="examples/style.png" />
