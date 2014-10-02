@@ -28,7 +28,10 @@ var exec = require('child_process').exec,
     optcfg = {
         css: String,
         template: String,
-        output: String
+        output: String,
+        width: Number,
+        height: Number,
+        scale: Number
     },
     opts = require('nopt')(optcfg),
     urls = opts.argv.remain,
@@ -66,7 +69,10 @@ if (!json) {
 badge(json, {
    file: file[1],
    cssfile: opts.css,
-   hbfile: opts.template
+   hbfile: opts.template,
+   scale: opts.scale
 });
 
-exec(cmd + file[1] + ' ' + (opts.png || (file[1] + '.png')));
+exec(cmd + file[1] + ' ' + (opts.png || (file[1] + '.png')) + ' ' + (opts.width || '') + ' ' + (opts.height || ''), function(E, O, R) {
+   console.log(O);
+});
