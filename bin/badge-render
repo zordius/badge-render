@@ -63,8 +63,6 @@ if (!json) {
     die('No json data in the file:' + file[0]);
 }
 
-console.log(opts);
-
 badge(json, {
    file: file[1],
    cssfile: opts.css,

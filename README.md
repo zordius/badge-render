@@ -19,7 +19,7 @@ Commandline Usage
 ** Generate your badge by badge json **
 
 ```sh
-badge-render examples/all_browsers_pass.json
+badge-render examples/all_browsers_pass.json lib/index.html
 ```
 
 The input JSON: <a href="examples/all_browsers_pass.json">examples/all_browsers_pass.json</a>
