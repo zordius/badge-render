@@ -63,4 +63,16 @@ if (!json) {
     die('No json data in the file:' + file[0]);
 }
 
+if (opts.output) {
+    json.file = opts.output;
+}
+
+if (opts.template) {
+    json.hbfile = opts.template;
+}
+
+if (opts.css) {
+    json.cssfile = opts.css
+}
+
 badge(json);
