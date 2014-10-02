@@ -24,6 +24,7 @@ SOFTWARE.
 var exec = require('child_process').exec,
     fs = require('fs'),
     path = require('path'),
+    badge = require('..'),
     optcfg = {
         css: String,
         template: String,
@@ -62,4 +63,4 @@ if (!json) {
     die('No json data in the file:' + file[0]);
 }
 
-
+badge(json);
