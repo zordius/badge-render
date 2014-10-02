@@ -33,7 +33,7 @@ badge-render examples/all_browsers_pass.json lib/index.html --png test.png
 
 **Options: Scale the html and png**
 
-This feature is supported by updating CSS in template.
+This feature is supported by updating PhantomJS zoomFactor.
 
 ```sh
 badge-render examples/all_browsers_pass.json lib/index.html --png examples/scale.png --scale 0.5

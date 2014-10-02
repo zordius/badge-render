@@ -70,10 +70,9 @@ if (!json) {
 badge(json, {
    file: file[1],
    cssfile: opts.css,
-   hbfile: opts.template,
-   scale: opts.scale
+   hbfile: opts.template
 });
 
-exec(cmd + file[1] + ' ' + (opts.png || (file[1] + '.png')) + ' ' + (opts.width || '') + ' ' + (opts.height || ''), function(E, O, R) {
+exec(cmd + file[1] + ' ' + (opts.png || (file[1] + '.png')) + ' ' + (opts.scale || '1') + ' ' + (opts.width || '500') + ' ' + (opts.height || ''), function(E, O, R) {
    console.log(O);
 });

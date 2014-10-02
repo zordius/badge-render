@@ -2,7 +2,6 @@
 <head>
 <style>
 html, body{margin:0;padding:0}
-html{;{{#if scale}};transform:scale({{scale}});-webkit-transform:scale({{scale}});transform-origin:0 0;-webkit-transform-origin:0 0{{/if}};}
 img{display:inline}
 p {margin:0;color:#484;text-align:left}
 i {display:block;color:#844;text-align:left}
