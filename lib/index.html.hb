@@ -1,5 +1,4 @@
 <html>
-<body>
 <head>
 <style>
 html, body{margin:0;padding:0}
@@ -7,9 +6,12 @@ image {display:inline}
 p {margin:0;color:#484;text-align:left}
 i {display:block;color:#844;text-align:left}
 div{display:inline-block;width:100px;padding:4px;text-align:center;font-size:20px}
+{{extracss}}
 </style>
+<title>{{title}}</title>
 </head>
-{{#each .}}
+<body>
+{{#each browser}}
 <div>
 <image src="../browser-badge/static/{{@key}}.png" />
 {{#each .}}
