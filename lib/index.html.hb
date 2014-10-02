@@ -11,9 +11,9 @@ div{display:inline-block;width:100px;padding:4px;text-align:center;font-size:20p
 <title>{{title}}</title>
 </head>
 <body>
-{{#each browser}}
+{{#each browsers}}
 <div>
-<image src="../browser-badge/static/{{@key}}.png" />
+<image src="{{../assets}}{{@key}}.png" />
 {{#each .}}
 {{#if .}}<p>&#x2713;{{@key}}</p>{{else}}<i>&#x2717;{{@key}}</i>{{/if}}
 {{/each}}
