@@ -5,7 +5,7 @@ html, body{margin:0;padding:0}
 img{display:inline}
 p {margin:0;color:#484;text-align:left}
 i {display:block;color:#844;text-align:left}
-div{display:inline-block;width:92px;padding:4px;text-align:center;font-size:20px;min-height:150px}
+div{vertical-align:top;overflow:hidden;display:inline-block;width:92px;padding:4px;text-align:center;font-size:20px;min-height:150px}
 {{extracss}}
 </style>
 <title>{{title}}</title>
