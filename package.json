@@ -16,7 +16,7 @@
   "dependencies": {
     "handlebars": "2.0.0",
     "nopt": "3.0.0",
-    "phantomjs": "1.9.10"
+    "phantomjs": "1.9.12"
   },
   "bin": {
     "badge-render": "./bin/badge-render"
