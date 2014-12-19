@@ -1,6 +1,6 @@
 {
   "name": "badge-render",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Node.js + PhantomJS based solution to generate browser testing results badge.",
   "author": "Zordius <zordius@yahoo-inc.com>",
   "keywords": [
@@ -16,10 +16,12 @@
   "dependencies": {
     "handlebars": "2.0.0",
     "nopt": "3.0.0",
+    "request": "2.51.0",
     "phantomjs": "1.9.12"
   },
   "bin": {
-    "badge-render": "./bin/badge-render"
+    "badge-render": "./bin/badge-render",
+    "badge-saucelabs-results": "./bin/saucelabs_results"
   },
   "directories": {
     "lib": "./lib"
