@@ -35,10 +35,10 @@ var browsers = {
 REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs?full=:get_full_info', json: true}, function (err, response, body) {
     var badge = {};
 
-    Object.keys(browsers).map(function (V, K) {
-        badge[V || K] = {};
+    Object.keys(browsers).map(function (V) {
+        badge[browsers[V] || V] = {};
     });
- 
+
     body.forEach(function (D) {
         if (D.build !== process.env.TRAVIS_JOB_ID) {
             return;
