@@ -42,7 +42,7 @@ REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs
     });
 
     body.forEach(function (D) {
-        if (D.build != process.env.TRAVIS_JOB_ID) {
+        if (D.build != build) {
             return;
         }
 
