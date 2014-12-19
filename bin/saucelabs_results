@@ -30,8 +30,10 @@ var browsers = {
         iphone: 0,
         ipad: 0
     },
-    REQ = require('request');
+    REQ = require('request'),
+    build = process.argv[2] || process.env.TRAVIS_JOB_ID;
 
+console.warn('I will look for build == ' + build + ' results...');
 REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs?full=:get_full_info', json: true}, function (err, response, body) {
     var badge = {};
 
@@ -40,7 +42,7 @@ REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs
     });
 
     body.forEach(function (D) {
-        if (D.build !== process.env.TRAVIS_JOB_ID) {
+        if (D.build != process.env.TRAVIS_JOB_ID) {
             return;
         }
 
