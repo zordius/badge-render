@@ -44,8 +44,8 @@ REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs
             return;
         }
 
-        badge[browsers[D.browser] || D.browser][D.browser_version.split('.').slice(0, 2).join('.')] = D.passed;
+        badge[browsers[D.browser] || D.browser][D.browser_short_version] = D.passed;
     });
 
-    console.log(JSON.stringify({browsers: badge}));
+    console.log(JSON.stringify({browsers: badge, raw: body}));
 });
