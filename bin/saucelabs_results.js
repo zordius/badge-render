@@ -30,17 +30,16 @@ var browsers = {
         iphone: 0,
         ipad: 0
     },
-    REQ = require('request'),
-    lodash = require('lodash');
+    REQ = require('request');
 
 REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs?full=:get_full_info', json: true}, function (err, response, body) {
     var badge = {};
 
-    lodash.map(browsers, function (V, K) {
+    Object.keys(browsers).map(function (V, K) {
         badge[V || K] = {};
     });
  
-    lodash.map(body, function (D) {
+    body.forEach(function (D) {
         if (D.build !== process.env.TRAVIS_JOB_ID) {
             return;
         }
