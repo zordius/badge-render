@@ -23,13 +23,13 @@ SOFTWARE.
 'use strict';
 
 var browsers = {
-        android: 'android-browser',
+        firefox: 0,
         googlechrome: 'chrome',
         iexplore: 'explorer',
-        firefox: 0,
         safari: 0,
         iphone: 0,
-        ipad: 0
+        ipad: 0,
+        android: 'android-browser'
     },
     REQ = require('request'),
     build = process.argv[2] || process.env.TRAVIS_JOB_ID;
