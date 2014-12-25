@@ -63,6 +63,12 @@ badge-render examples/all_browsers_pass.json lib/index.html --png examples/style
 * The CSS file: <a href="examples/extra.css">examples/extra.css</a>
 * The output PNG: <img src="examples/style.png" />
 
+**Saucelabs+Travis Migration**
+
+Use this command `badge-saucelabs-results > badge.json` to save your saucelabs test results. The command will use `SAUCE_USERNAME` to look for your recent tests result, and then use `TRAVIS_JOB_ID` to match your build name.
+
+If you want to use different build name to match sauce labs results, you can try `badge-saucelabs-results YOUR_BUILD_NAME > badge.json` . After the results save to badge.json, you can then render the badge by `badge-render` command.
+
 CommonJS Usage
 --------------
 
