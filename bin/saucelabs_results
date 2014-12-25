@@ -23,6 +23,7 @@ SOFTWARE.
 'use strict';
 
 var browsers = {
+        android: 'android-browser',
         googlechrome: 'chrome',
         iexplore: 'explorer',
         firefox: 0,
