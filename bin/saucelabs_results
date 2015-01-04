@@ -38,7 +38,7 @@ sort_keys = function (O) {
     var ret = {};
 
     Object.keys(O).sort(function (A,B) {
-        return B - A;
+        return A - B;
     }).map(function (V) {
         ret[V] = O[V];
     });
