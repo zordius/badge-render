@@ -32,7 +32,19 @@ var browsers = {
         android: 'android-browser'
     },
     REQ = require('request'),
-    build = process.argv[2] || process.env.TRAVIS_JOB_ID;
+    build = process.argv[2] || process.env.TRAVIS_JOB_ID,
+
+sort_keys = function (O) {
+    var ret = {};
+
+    Object.keys(O).sort(function (A,B) {
+        return B - A;
+    }).map(function (V) {
+        ret[V] = O[V];
+    });
+
+    return ret;
+};
 
 console.warn('I will look for build == ' + build + ' results...');
 REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs?full=:get_full_info', json: true}, function (err, response, body) {
@@ -48,6 +60,10 @@ REQ({url: 'https://saucelabs.com/rest/v1/' + process.env.SAUCE_USERNAME + '/jobs
         }
 
         badge[browsers[D.browser] || D.browser][D.browser_short_version] = D.passed;
+    });
+
+    Object.keys(badge).map(function (V) {
+        badge[V] = sort_keys(badge[V]);
     });
 
     console.log(JSON.stringify({browsers: badge, raw: body}));
