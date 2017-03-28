@@ -26,6 +26,7 @@ var browsers = {
         firefox: 0,
         googlechrome: 'chrome',
         iexplore: 'explorer',
+        microsoftedge: 'explorer',
         safari: 0,
         iphone: 0,
         ipad: 0,
