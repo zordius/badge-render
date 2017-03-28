@@ -14,10 +14,10 @@
     "url": "git@github.com:zordius/badge-render.git"
   },
   "dependencies": {
-    "handlebars": "2.0.0",
-    "nopt": "3.0.0",
-    "request": "2.51.0",
-    "phantomjs": "1.9.12"
+    "handlebars": "4.0.6",
+    "nopt": "4.0.1",
+    "request": "2.81.0",
+    "phantomjs": "2.1.7"
   },
   "bin": {
     "badge-render": "./bin/badge-render",
