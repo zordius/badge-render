@@ -1,6 +1,6 @@
 {
   "name": "badge-render",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A Node.js + PhantomJS based solution to generate browser testing results badge.",
   "author": "Zordius <zordius@yahoo-inc.com>",
   "keywords": [
